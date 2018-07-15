@@ -1,5 +1,721 @@
+<!DOCTYPE html>
 <html>
+<head>
+    <title>Osho Madhushala</title>
+
+    <!-- view port and encoding type-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <!-- /viewport and encoding type -->
+
+    <!-- google jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- /google jquery cdn -->
+
+    <!-- viewport js -->
+    <script type="text/javascript" src="./script/viewport.js"></script>
+    <!-- /viewport js -->
+
+    <!-- w3schools w3.css stylesheet link -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- /w3schools w3.css stylesheet link -->
+
+    <!-- fontawesome cdn -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- /fontawesome cdn -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+</head>
+<style type="text/css">
+
+/*
+funcky cartoonist - font-family: 'Gaegu', cursive;
+*/
+@import url('https://fonts.googleapis.com/css?family=Gaegu');
+
+/*
+main sirill - font-family: 'Poiret One', cursive;
+main normal - font-family: 'Quattrocento Sans', sans-serif;
+cursive - font-family: 'Satisfy', cursive;
+plain bold headers - font-family: 'Concert One', cursive;
+*/
+@import url('https://fonts.googleapis.com/css?family=Concert+One|Poiret+One|Quattrocento+Sans|Satisfy');
+
+body
+{
+    font-family: 'Quattrocento Sans', sans-serif;
+}
+a
+{
+    color: #fff;
+    margin:0px;
+    padding:0px;
+    text-decoration: none;
+}
+a:hover
+{
+    color: #fff;
+}
+</style>
+
 <body>
-Hello
+
+<style type="text/css">
+.loader
+{
+    text-align: center;
+}
+.loader img
+{
+    margin:auto;
+    max-width:500px;
+    width:100%;
+    height:100%;
+}
+.no-loader
+{
+    display:none;
+}
+</style>
+
+<div class="loader">
+<img src="./images/meditation.gif">
+<br>
+<br>
+<p style="font-size:25px;">LOADING</p>
+</div>
+
+<div class="no-loader">
+
+<!-- nav bar -->
+<style type="text/css">
+/*nav bar outer container*/
+.nav
+{
+    position: fixed;
+    color: #fff;
+    width: 100%;
+    overflow: hidden;
+    background: rgba(0,0,0,0.2);
+    z-index:999;
+    font-size: 25px;
+    height: 70px;
+    transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+
+}
+/*nav bar logo*/
+.nav .logo
+{
+    float:left;
+    width:80px;
+    text-align: center;
+}
+.nav .logo img
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor:pointer;
+}
+/*nav on desktop*/
+.nav .big-links
+{
+    float: right;
+}
+.nav .big-links .part
+{
+    float:right;
+    text-align: center;
+    cursor: pointer;
+    margin-top:15px;
+    margin-right: 10px;
+}
+.nav .big-links .part:hover
+{
+    border-bottom: 2px solid #fff;
+    border-radius: 2px;
+}
+/*the non ghost css for nav*/
+.active-nav
+{
+    background: #202020;
+    transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+
+}
+/*toggle menu icon on mobile nav*/
+.container {
+    float: right;
+    text-align: center;
+    margin-top: 15px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+/*nav on phone*/
+.small-links .part
+{
+    width:100%;
+    text-align: center;
+    height: 60px;
+}
+
+@media screen and ( min-width: 600px ) 
+{
+.nav .small-links
+{
+    display: none;
+}
+.nav .big-links
+{
+    display: block;
+}
+.nav .small-links-opener
+{
+    display: none;
+}
+}
+@media screen and ( max-width: 600px ) 
+{
+.nav .small-links
+{
+    display: block;
+}
+.nav .big-links
+{
+    display: none;
+}
+.nav .small-links-opener
+{
+    display: block;
+}
+.w3-padding-64
+{
+    padding-top:20px !important;
+    padding-bottom: 10px !important;
+}
+#resume_button
+{
+    margin-bottom: 20px;
+    margin-top:10px;
+}
+
+}
+</style>
+<div class="w3-container nav">
+    <div class="w3-container">
+        <div class="logo">
+            <img src="./images/relax.gif" id="topFunction" onclick="closeFunction(this)">
+        </div>
+        <div class="big-links">
+            <a href="#conta" style="color: #fff"><div class="part" style="width: 95px;">Contact</div></a>
+            <a href="#work" style="color: #fff"><div class="part" style="width: 120px;">Activities</div></a>
+            <a href="#about" style="color: #fff"><div class="part" style="width: 80px;">About</div></a>
+        </div>
+        <div class="container small-links-opener" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </div>
+    <div class="small-links">
+        <a href="#conta" style="color: #fff"><div class="part" onclick="closeFunction(this)">Contact</div></a>
+        <a href="#work" style="color: #fff"><div class="part" onclick="closeFunction(this)">Activities</div></a>
+        <a href="#about" style="color: #fff"><div class="part" onclick="closeFunction(this)">About</div></a>
+    </div>
+</div>
+<script type="text/javascript">
+//scrolling effect by adding and removing css classes
+$(window).scroll(function () {
+    if ($(window).scrollTop() > 100) {
+        $(".nav").addClass('bounceInDown animated-fast');
+        $(".nav").addClass('active-nav');
+    }
+    else {
+        $(".nav").removeClass('bounceInDown animated-fast');
+        $(".nav").removeClass('active-nav');
+    }
+});
+
+// When the user clicks on the button, scroll to the top of the document
+$("#topFunction").click(function(){
+    window.scroll({
+        top:0,
+        left:0,
+        behavior:'smooth'
+    })
+});
+
+function closeFunction(x)
+{
+    $(".small-links-opener").removeClass("change");
+    $(".nav").css("height","70px");
+}
+
+
+//toggle open and close menu sign on mobile nav
+function myFunction(x) {
+    x.classList.toggle("change");
+    if($(".nav").css("height")=="70px")
+    {
+        $(".small-links").slideDown();
+        $(".nav").css("height","auto");
+    }
+    else
+    {
+        $(".small-links").fadeOut();
+            $(".nav").css("height","70px");
+    }
+}
+</script>
+<!-- /nav bar -->
+
+
+<!--other pages common css-->
+<style type="text/css">
+.black_button
+{
+	text-align: center;
+	height: 45px;
+	border: 2px solid #000 !important;
+	border:none;
+	background-color: #000;
+	color: #ffffff;
+	transition: 0.3s ease-out;
+	-moz-transition: 0.3s ease-out;
+	-o-transition: 0.3s ease-out;
+	-webkit-transition: 0.3s ease-out;
+   	cursor: pointer;
+}
+.black_button:hover
+{
+	background-color: transparent;
+	color: #000000;
+	transition: 0.3s ease-out;
+	-moz-transition: 0.3s ease-out;
+	-o-transition: 0.3s ease-out;
+	-webkit-transition: 0.3s ease-out;
+}
+body
+{
+	background-image: url('./images/blue_mountain_background.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	margin: 0px;
+	padding: 0px;
+}
+.border_top
+{
+	border-top: 2px solid #000000;
+	width:50px;
+}
+.border_header
+{
+	font-size:30px;
+	font-family: Arial,Helvetica,sans-serif;
+}
+ul, li
+{
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  float: left;
+  text-align: center;
+}
+</style>	
+
+<!--parallex-->
+<style type="text/css">
+.parallex
+{
+	background-image: url('./images/climb_mountain.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	width: 100%;
+	min-height: 400px;
+	height: auto;
+	text-align: center;
+	font-size: 50px;
+}
+.inside_center
+{
+	margin: auto;
+	text-align: center;
+	width:170px;
+}
+@media screen and (max-width:400px)
+{
+#madhu
+{
+font-size:30px;
+letter-spacing: normal;
+font-family: Arial,Helvetica,sans-serif;
+}
+}
+}
+#madhu
+{
+	letter-spacing: 3px;
+}
+</style>
+
+<div class="parallex w3-padding-64">
+	<br>
+	<div id="madhu"><b>OSHO MADHUSHALA</b></div>
+	<br>
+	<a href="#work">
+		<div class="black_button inside_center w3-padding" style="width:190px;font-size:18px;">Book Session&nbsp;&nbsp;<i class="fa fa-pencil"></i></div>
+	</a>
+	<br>
+	<a href="#about">
+		<div style="font-size:35px !important;margin:auto;width:50px;height:50px;text-align: center;color:#000 !important"><i class="fa fa-angle-down"></i></div>
+	</a>
+</div>
+<!-- /parallex -->
+
+<!-- about -->
+<style type="text/css">
+.index_about
+{
+	background-color: #fff;
+}
+.self-image
+{
+	text-align:center;
+}
+.content
+{
+    font-size: 18px;
+    width:100%;
+}
+.padding_10
+{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+@media screen and ( max-width: 830px ) 
+{
+    .padding_10
+    {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+}
+</style>
+<div class="w3-container w3-padding-64 padding_10 index_about">
+    <div id="about"></div>
+    <div class="w3-container self-image w3-third">
+        <br>
+        <img src="./images/relax.gif" style="width: 100%; height: auto;"><br>
+        <br>
+    </div>
+    <div class="w3-container w3-rest">
+      <div class="border_top">
+			<br>
+		</div>
+		<div class="border_header">
+			<b>ABOUT <br>US</b>
+		</div>
+		<p class="content" style="text-align: justify;">
+			Osho Madhushala is a place for meditation and where people can meet their true selves. Osho Madhushala was founded in 1980
+			 by swami Chandermoli Jii. The Osho Madhushala Foundation is licensed under Osho International.
+			  Here we organize daily sessions from 6:00 AM to 8:00 PM for osho meditations. Currently Osho Madhushala is lead by Swami Aantar Muni.
+ 			We do also organise some perodic festivals for meditation purposes with daily meditation. 
+		</p>
+		<br>
+		<div class="black_button w3-padding" style="width: 160px;font-size: 18px">Read More <i class="fa fa-angle-right"></i></div>
+		<br>
+    </div>
+</div>
+<!-- /about -->
+
+<!-- work -->
+<style type="text/css">
+.meditation-session , .meditation-festival, .routine-meditation, .chocolate, .music, .dance
+{
+	background-color: #fff;
+	text-align: center;
+	min-width:250px;
+	padding-top: 32px;
+	padding-bottom:32px;
+}
+@media (min-width:600px)
+{
+.meditation-session , .meditation-festival, .routine-meditation, .chocolate, .music, .dance
+{
+	padding: 15px;
+	margin-left:5%;
+	margin-right:5%;
+}
+}
+@media (max-width:600px)
+{
+.meditation-session , .meditation-festival, .routine-meditation, .chocolate, .music, .dance
+{
+	padding:5px;
+	margin-left:5px;
+	margin-right:5px;
+}
+}
+</style>
+<div class="w3-container w3-padding-64 padding_10">
+	<div id="work"></div>
+	<div class="border_top">
+		<br>
+	</div>
+	<div class="border_header">
+		<b>ACTIVITIES</b>
+	</div>
+	<br>
+	<div class="w3-container">
+		<div class="w3-third w3-margin-bottom">
+			<div class="meditation-session">
+				<img src="./images/1.gif" style="width:100%;height:auto">
+				<h3>Meditation Session</h3>
+				<h4>1h | ₹1,000</h4>
+				<h6 class="w3-justify">
+					If you want to live a more fulfilled life, first you will want to know your potential, who you really are. Meditation is the route to that knowing. It is the methodology of the science of awareness. This course is set for enrolment in these meditation sessions. These meditation session can be attended publicly or can also be held private as per your convience.
+				</h6>
+				<br>
+				<form action="#contact" method="post">
+					<input type="hidden" value="Meditation Session" name="try">
+					<button type="submit" class="black_button" style="width: 150px">Book</button>
+				</form>
+			</div>
+		</div>
+		<div class="w3-third  w3-margin-bottom">
+			<div class="routine-meditation">
+				<img src="./images/meditation1.gif" style="width:100%;height:auto">
+				<h3>Daily Meditation</h3>
+				<h4>1h | ₹1,000</h4>
+				<h6 class="w3-justify">
+					Many meditative techniques require one to sit still and silent. But for most of us accumulated stress in our bodymind makes that difficult. Before we can hope to access our inner powerhouse of consciousness, we need to let go of our tensions. Thereby we have introduced meditation sessions on daily bases, which will let you live to the fullest of yourself.
+				</h6>
+				<br>
+				<form action="#contact" method="post">
+					<input type="hidden" value="Routine Meditation" name="try">
+					<button type="submit" class="black_button" style="width: 150px">Book</button>
+				</form>
+			</div>
+		</div>
+		<div class="w3-third w3-margin-bottom">
+			<div class="meditation-festival">
+				<img src="./images/yoga_drib01.gif" style="width:100%;height:auto">
+				<h3>Meditation Festival</h3>
+				<h4>1h | ₹1,000</h4>
+				<h6 class="w3-justify">
+					Special occasions happens here too, every day is a special gift, thereby we celebrate the gift of joy periodically throughout the year like a festival. Meditation will make you more alive and sensitive; your life will become richer. Watch out. Always remember that if you are moving in the right direction, you will go on flowering, we will help you achieve that.
+				</h6>
+				<br>
+				<form action="#contact" method="post">
+					<input type="hidden" value="Meditation Festival" name="try">
+					<button type="submit" class="black_button" style="width: 150px">Book</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+</div>
+<!-- /work -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="conta"></div>
+
+
+<br>
+<br>
+
+<!-- footer -->
+<style type="text/css">
+.footer
+{
+    background-color: #57bbbf;
+    width:100%;
+    color: #eee;
+    height:auto;
+    text-align: center;
+    font-size: 20px;
+}
+.social-media
+{
+    text-align: center;
+}
+.social-media img
+{
+    max-width: 50px;
+    width:100%;
+    height:auto;
+    margin:20px;
+    cursor: pointer;
+}
+</style>
+<div class="w3-container footer w3-padding-32">
+    Email : <a href="" style="color: #fff">adern.nerk.11@gmail.com</a>
+    <br><br>
+    Social Media & Other
+    <div class="social-media">
+        <a href="" target="_blank"><img src="./images/facebook.svg"/></a>
+        <a href="" target="_blank"><img src="./images/instagram.svg"/></a>
+        <a href="" target="_blank"><img src="./images/twitter.svg"/></a>
+        <img src="./images/whatsapp.svg"/>
+    </div>
+</div>
+
+<!-- /footer -->
+
+<!-- scroll to section -->
+<script type="text/javascript">
+$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top - 100
+    }, 500);
+});
+</script>
+<!-- /scroll to section -->
+
+<!-- animation style -->
+<style type="text/css">
+.bounceInDown {
+    -webkit-animation-name: bounceInDown;
+    animation-name: bounceInDown;
+}
+.animated-fast {
+    -webkit-animation-duration: 0.7s;
+    animation-duration: 0.7s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+@keyframes bounceInDown
+{
+0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0);
+}   
+60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+}
+75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+}
+90% {
+    -webkit-transform: translate3d(0, 5px, 0)
+ ;   transform: translate3d(0, 5px, 0);
+}
+100% {
+    -webkit-transform: none;
+    transform: none;
+}
+}
+
+@keyframes homeImgAnimation
+{
+0% {
+    -webkit-transform: rotate(4deg);
+    transform: rotate(5deg);
+}
+50% {
+    -webkit-transform: rotate(-4deg);
+    transform: rotate(-5deg);
+}
+100% {
+    -webkit-transform: rotate(4deg);
+    transform: rotate(5deg);
+}
+}
+</style>
+<!-- /animation style -->
+
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".loader").fadeOut(2000);
+    $(".no-loader").delay(2000).fadeIn();
+});
+</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+  attribution=setup_tool
+  page_id="1640850449468781"
+  theme_color="#0084ff">
+</div>
+
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
 </body>
 </html>
