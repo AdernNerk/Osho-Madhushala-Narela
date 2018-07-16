@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js">
 <head>
 	<link rel="icon" href="./images/ezgif.com-gif-maker.gif">
     <title>Osho Madhushala</title>
@@ -23,6 +23,21 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
+	<script src="https://github.com/Modernizr/Modernizr/raw/master/modernizr.js"></script>
+
+	<style>
+		.no-js #loader { display: none; }
+		.js #loader{
+			text-align: center;
+		} 
+		.js #loader img { 
+			display: block;     
+			margin:auto;
+		    max-width:500px;
+    		width:100%;
+    		height:100%; 
+    	}
+	</style>
 </head>
 <style type="text/css">
 
@@ -58,6 +73,19 @@ a:hover
 
 <body>
 
+<div id="loader">
+<img src="./images/meditation.gif">
+<br>
+<br>
+<p style="font-size:25px;">LOADING</p>
+</div>
+<script>
+	// Wait for window load
+	$(window).load(function() {
+		// Animate loader off screen
+		$("#loader").fadeOut(1000);
+	});
+</script>	
 
 <!-- nav bar -->
 <style type="text/css">
@@ -507,6 +535,26 @@ letter-spacing:2px;
 .overlay-a .modal-a .title-a {
   margin-top: 0;
 }
+@media screen and ( max-width: 650px )
+{
+	#osho-about-quote-photo
+	{
+		display: none;
+	}
+	.osho-about-quote-photo
+	{
+		height:100px;
+		width: 100%;
+	}
+	.overlay-a, #modal1-a
+	{
+		padding-left: 5px !important;
+		padding-right: 5px !important;
+		padding-top: 10px !important;
+		padding-bottom: 10px !important;
+
+	}
+}
 </style>
 
 
@@ -515,8 +563,8 @@ letter-spacing:2px;
 		<div class='title-a'>About Us<a class='close-modal-a' style="width:50px;color:#fff; float:right;padding:5px;border-radius: 5px;" data-modal="#modal1-a" href="#">X</a></div>
 <hr>
 
-<div class=" w3-round w3-text-white w3-padding-64" style="background:url(./images/osho050-585x390.jpg);background-size:cover;background-repeat:no-repeat;">
-<strong class="w3-margin w3-paddding" >
+<div class=" w3-round w3-text-white osho-about-quote-photo w3-padding-64" style="background:url(./images/osho050-585x390.jpg);background-size:cover;background-repeat:no-repeat;">
+<strong class="w3-margin w3-paddding" id="osho-about-quote-photo">
 <center>
 	<h5>
 <i class="fa fa-quote-left w3-text-grey"></i> Osho defies categorization. His thousands of talks cover<br>
