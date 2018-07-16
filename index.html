@@ -61,32 +61,6 @@ a:hover
 
 <body>
 
-<style type="text/css">
-.loader
-{
-    text-align: center;
-}
-.loader img
-{
-    margin:auto;
-    max-width:500px;
-    width:100%;
-    height:100%;
-}
-.no-loader
-{
-    display:none;
-}
-</style>
-
-<div class="loader">
-<img src="./images/meditation.gif">
-<br>
-<br>
-<p style="font-size:25px;">LOADING</p>
-</div>
-
-<div class="no-loader">
 
 <!-- nav bar -->
 <style type="text/css">
@@ -313,7 +287,7 @@ function myFunction(x) {
 	height: 45px;
 	border: 2px solid #000 !important;
 	border:none;
-	background-color: #000;
+	background-color: #101010;
 	color: #ffffff;
 	transition: 0.3s ease-out;
 	-moz-transition: 0.3s ease-out;
@@ -395,16 +369,11 @@ font-family: Arial,Helvetica,sans-serif;
 }
 </style>
 
-<div class="parallex w3-padding-64">
-	<br>
-	<div id="madhu"><b>OSHO MADHUSHALA</b></div>
-	<br>
-	<a href="#work">
-		<div class="black_button inside_center w3-padding" style="width:190px;font-size:18px;">Book Session&nbsp;&nbsp;<i class="fa fa-pencil"></i></div>
-	</a>
-	<br>
+<div class="parallex" style="padding-top: 80px;padding-bottom: 30px;overflow: hidden;">
+	<img src="./images/ezgif.com-gif-maker.gif" style="max-width: 250px; height: auto;width: auto;margin-bottom: 20px;">
+	<div id="madhu" class="w3-margin-bottom"><b>OSHO MADHUSHALA</b></div>
 	<a href="#about">
-		<div style="font-size:35px !important;margin:auto;width:50px;height:50px;text-align: center;color:#000 !important"><i class="fa fa-angle-down"></i></div>
+		<div class="black_button" style="padding-left:2px;border-radius:50%;font-size:35px !important;margin:auto;width:50px;height:50px;text-align: center;"><i class="fa fa-angle-down"></i></div>
 	</a>
 </div>
 <!-- /parallex -->
@@ -471,27 +440,17 @@ font-family: Arial,Helvetica,sans-serif;
 {
 	background-color: #fff;
 	text-align: center;
-	min-width:250px;
-	padding-top: 32px;
-	padding-bottom:32px;
+	width:300px;
+	height:440px;
+	overflow: hidden;
+	padding: 10px;
+	margin: 10px;
 }
-@media (min-width:600px)
+.activity-container
 {
-.meditation-session , .meditation-festival, .routine-meditation, .chocolate, .music, .dance
-{
-	padding: 15px;
-	margin-left:5%;
-	margin-right:5%;
-}
-}
-@media (max-width:600px)
-{
-.meditation-session , .meditation-festival, .routine-meditation, .chocolate, .music, .dance
-{
-	padding:5px;
-	margin-left:5px;
-	margin-right:5px;
-}
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;	
 }
 </style>
 <div class="w3-container w3-padding-64 padding_10">
@@ -503,57 +462,109 @@ font-family: Arial,Helvetica,sans-serif;
 		<b>ACTIVITIES</b>
 	</div>
 	<br>
-	<div class="w3-container">
-		<div class="w3-third w3-margin-bottom">
-			<div class="meditation-session">
-				<img src="./images/1.gif" style="width:100%;height:auto">
-				<h3>Meditation Session</h3>
-				<h4>1h | ₹1,000</h4>
-				<h6 class="w3-justify">
-					If you want to live a more fulfilled life, first you will want to know your potential, who you really are. Meditation is the route to that knowing. It is the methodology of the science of awareness. This course is set for enrolment in these meditation sessions. These meditation session can be attended publicly or can also be held private as per your convience.
-				</h6>
-				<br>
-				<form action="#contact" method="post">
-					<input type="hidden" value="Meditation Session" name="try">
-					<button type="submit" class="black_button" style="width: 150px">Book</button>
-				</form>
+	<div class="w3-container activity-container">
+		<div class="meditation-session w3-margin-bottom" id="one-one">
+			<img id="one-img" src="./images/1.gif" style="width:100%;height:auto">
+			<h3>Meditation Session</h3>
+			<h4>1h | ₹1,000</h4>
+			<div id="one-three">
+				<br><br>
 			</div>
+			<h6 class="w3-justify" id="one-two">
+				If you want to live a more fulfilled life, first you will want to know your potential, who you really are. Meditation is the route to that knowing. It is the methodology of the science of awareness. This course is set for enrolment in these meditation sessions. These meditation session can be attended publicly or can also be held private as per your convience.
+			</h6>
+				<button type="submit" class="black_button" style="width: 150px">Book&nbsp;&nbsp;<i class="fa fa-thumb-tack"></i></button>
 		</div>
-		<div class="w3-third  w3-margin-bottom">
-			<div class="routine-meditation">
-				<img src="./images/meditation1.gif" style="width:100%;height:auto">
-				<h3>Daily Meditation</h3>
-				<h4>1h | ₹1,000</h4>
-				<h6 class="w3-justify">
-					Many meditative techniques require one to sit still and silent. But for most of us accumulated stress in our bodymind makes that difficult. Before we can hope to access our inner powerhouse of consciousness, we need to let go of our tensions. Thereby we have introduced meditation sessions on daily bases, which will let you live to the fullest of yourself.
-				</h6>
-				<br>
-				<form action="#contact" method="post">
-					<input type="hidden" value="Routine Meditation" name="try">
-					<button type="submit" class="black_button" style="width: 150px">Book</button>
-				</form>
+		<script type="text/javascript">
+			$("#one-two").hide();
+			$("#one-one").mouseenter(function(){
+				$("#one-three").slideUp(100);				
+				$("#one-img").slideUp(100);
+				$("#one-two").delay(200).fadeIn(500);
+			});
+			$("#one-one").mouseleave(function(){
+				$("#one-two").slideUp(100);				
+				$("#one-three").delay(100).fadeIn(500);
+				$("#one-img").delay(200).fadeIn(500);
+			});
+		</script>
+		<div class="routine-meditation w3-margin-bottom" id="two-one">
+			<img src="./images/meditation1.gif" style="width:100%;height:auto" id="two-img">
+			<h3>Daily Meditation</h3>
+			<h4>1h | ₹1,000</h4>
+			<div id="two-three">
+				<br><br>
 			</div>
+			<h6 class="w3-justify" id="two-two">
+				Many meditative techniques require one to sit still and silent. But for most of us accumulated stress in our bodymind makes that difficult. Before we can hope to access our inner powerhouse of consciousness, we need to let go of our tensions. Thereby we have introduced meditation sessions on daily bases, which will let you live to the fullest of yourself.
+			</h6>
+			<button type="submit" class="black_button" style="width: 150px">Book&nbsp;&nbsp;<i class="fa fa-thumb-tack"></i></button>
 		</div>
-		<div class="w3-third w3-margin-bottom">
-			<div class="meditation-festival">
-				<img src="./images/yoga_drib01.gif" style="width:100%;height:auto">
-				<h3>Meditation Festival</h3>
-				<h4>1h | ₹1,000</h4>
-				<h6 class="w3-justify">
-					Special occasions happens here too, every day is a special gift, thereby we celebrate the gift of joy periodically throughout the year like a festival. Meditation will make you more alive and sensitive; your life will become richer. Watch out. Always remember that if you are moving in the right direction, you will go on flowering, we will help you achieve that.
-				</h6>
-				<br>
-				<form action="#contact" method="post">
-					<input type="hidden" value="Meditation Festival" name="try">
-					<button type="submit" class="black_button" style="width: 150px">Book</button>
-				</form>
+		<script type="text/javascript">
+			$("#two-two").hide();
+			$("#two-one").mouseenter(function(){
+				$("#two-three").slideUp(100);				
+				$("#two-img").slideUp(100);
+				$("#two-two").delay(200).fadeIn(500);
+			});
+			$("#two-one").mouseleave(function(){
+				$("#two-two").slideUp(100);				
+				$("#two-three").delay(100).fadeIn(500);
+				$("#two-img").delay(200).fadeIn(500);
+			});
+		</script>
+
+		<div class="meditation-festival w3-margin-bottom" id="three-one">
+			<img src="./images/yoga_drib01.gif" style="width:100%;height:auto" id="three-img">
+			<h3>Meditation Festival</h3>
+			<h4>1h | ₹1,000</h4>
+			<div id="three-three">
+				<br><br>
 			</div>
+			<h6 class="w3-justify" id="three-two">
+				Special occasions happens here too, every day is a special gift, thereby we celebrate the gift of joy periodically throughout the year like a festival. Meditation will make you more alive and sensitive; your life will become richer. Watch out. Always remember that if you are moving in the right direction, you will go on flowering, we will help you achieve that.
+			</h6>
+				<button type="submit" class="black_button" style="width: 150px">Book&nbsp;&nbsp;<i class="fa fa-thumb-tack"></i></button>
 		</div>
+		<script type="text/javascript">
+			$("#three-two").hide();
+			$("#three-one").mouseenter(function(){
+				$("#three-three").slideUp(100);				
+				$("#three-img").slideUp(100);
+				$("#three-two").delay(200).fadeIn(500);
+			});
+			$("#three-one").mouseleave(function(){
+				$("#three-two").slideUp(100);				
+				$("#three-three").delay(100).fadeIn(500);
+				$("#three-img").delay(200).fadeIn(500);
+			});
+		</script>
 	</div>
 
 </div>
 <!-- /work -->
 
+<!--instagram container-->
+<style type="text/css">
+.instagram
+{
+	background-color: #fff;
+}
+</style>
+
+<div class="w3-container w3-padding-64 instagram padding_10">
+	<div class="border_top">
+		<br>
+	</div>
+	<div class="border_header">
+		<b>GALLERY</b>
+	</div>
+	<hr>
+<!--instagram live feed api pixlee-->
+<div id="pixlee_container"></div><script type="text/javascript">window.PixleeAsyncInit = function() {Pixlee.init({apiKey:'XvgW6U37E4c1a9Cj1gb'});Pixlee.addSimpleWidget({widgetId:'5618'});};</script><script src="//instafeed.assets.pixlee.com/assets/pixlee_widget_1_0_0.js"></script>
+	<hr>
+	<br>
+</div>
 
 
 
@@ -570,10 +581,6 @@ font-family: Arial,Helvetica,sans-serif;
 
 
 <div id="conta"></div>
-
-
-<br>
-<br>
 
 <!-- footer -->
 <style type="text/css">
@@ -607,6 +614,7 @@ font-family: Arial,Helvetica,sans-serif;
         <a href="" target="_blank"><img src="./images/facebook.svg"/></a>
         <a href="" target="_blank"><img src="./images/instagram.svg"/></a>
         <a href="" target="_blank"><img src="./images/twitter.svg"/></a>
+        <a href="" target="_blank"><img src="./images/youtube.svg"/></a>
         <img src="./images/whatsapp.svg"/>
     </div>
 </div>
@@ -690,32 +698,6 @@ $(document).on('click', 'a[href^="#"]', function (event) {
 }
 </style>
 <!-- /animation style -->
-
-</div>
-<script type="text/javascript">
-$(document).load(function(){
-    $(".loader").fadeOut(2000);
-    $(".no-loader").delay(2000).fadeIn();
-});
-</script>
-
-<!-- Your customer chat code -->
-<div class="fb-customerchat"
-  attribution=setup_tool
-  page_id="1640850449468781"
-  theme_color="#0084ff">
-</div>
-
-<!-- Load Facebook SDK for JavaScript -->
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
 
 </body>
 </html>
