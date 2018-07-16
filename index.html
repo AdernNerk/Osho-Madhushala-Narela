@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html>
 <head>
 	<link rel="icon" href="./images/ezgif.com-gif-maker.gif">
     <title>Osho Madhushala</title>
@@ -23,26 +23,6 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
-	<script src="./script/load.js"></script>
-
-	<style>
-	.no-js
-
-{
-	display:none;
-}
-		.no-js #loader { display: block; }
-		.js #loader{
-			text-align: center;
-		} 
-		.js #loader img { 
-			display: block;     
-			margin:auto;
-		    max-width:500px;
-    		width:100%;
-    		height:100%; 
-    	}
-	</style>
 </head>
 <style type="text/css">
 
@@ -78,20 +58,31 @@ a:hover
 
 <body>
 
-<div id="loader">
+<style type="text/css">
+.loader
+{
+    text-align: center;
+}
+.loader img
+{
+    margin:auto;
+    max-width:500px;
+    width:100%;
+    height:100%;
+}
+.no-loader
+{
+    display:none;
+}
+</style>
+
+<div class="loader">
 <img src="./images/meditation.gif">
-<br>
-<br>
-<p style="font-size:25px;">LOADING</p>
+<p style="font-size:30px;letter-spacing: 1px;">LOADING</p>
 </div>
-<script>
-	// Wait for window load
-	$(window).load(function() {
-		// Animate loader off screen
-		$("#loader").fadeOut(1000);
-		$(".no-js").delay(1000).fadeIn(1000);
-	});
-</script>	
+
+<div class="no-loader">
+
 
 <!-- nav bar -->
 <style type="text/css">
@@ -1101,6 +1092,17 @@ $(document).on('click', 'a[href^="#"]', function (event) {
 }
 </style>
 <!-- /animation style -->
+
+
+
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".loader").delay(2000).fadeOut();
+    $(".no-loader").delay(2500).fadeIn();
+});
+</script>
+
 
 </body>
 </html>
