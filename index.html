@@ -26,7 +26,12 @@
 	<script src="./script/load.js"></script>
 
 	<style>
-		.no-js #loader { display: none; }
+	.no-js
+
+{
+	display:none;
+}
+		.no-js #loader { display: block; }
 		.js #loader{
 			text-align: center;
 		} 
@@ -84,6 +89,7 @@ a:hover
 	$(window).load(function() {
 		// Animate loader off screen
 		$("#loader").fadeOut(1000);
+		$(".no-js").delay(1000).fadeIn(1000);
 	});
 </script>	
 
