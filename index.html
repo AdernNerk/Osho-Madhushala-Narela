@@ -1,1122 +1,1122 @@
--<!DOCTYPE html>
--<html>
--<head>
--	<link rel="icon" href="./images/ezgif.com-gif-maker.gif">
--    <title>Osho Madhushala</title>
--
--    <!-- view port and encoding type-->
--    <meta name="viewport" content="width=device-width, initial-scale=1">
--    <meta charset="UTF-8">
--    <!-- /viewport and encoding type -->
--
--    <!-- google jquery cdn -->
--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
--    <!-- /google jquery cdn -->
--
--    <!-- w3schools w3.css stylesheet link -->
--    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
--    <!-- /w3schools w3.css stylesheet link -->
--
--    <!-- fontawesome cdn -->
--    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
--    <!-- /fontawesome cdn -->
--
--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
--
--</head>
--<style type="text/css">
--
--/*
--funcky cartoonist - font-family: 'Gaegu', cursive;
--*/
--@import url('https://fonts.googleapis.com/css?family=Gaegu');
--
--/*
--main sirill - font-family: 'Poiret One', cursive;
--main normal - font-family: 'Quattrocento Sans', sans-serif;
--cursive - font-family: 'Satisfy', cursive;
--plain bold headers - font-family: 'Concert One', cursive;
--*/
--@import url('https://fonts.googleapis.com/css?family=Concert+One|Poiret+One|Quattrocento+Sans|Satisfy');
--
--body
--{
--    font-family: 'Quattrocento Sans', sans-serif;
--}
--a
--{
--    color: #fff;
--    margin:0px;
--    padding:0px;
--    text-decoration: none;
--}
--a:hover
--{
--    color: #fff;
--}
--</style>
--
--<body>
--
--<style type="text/css">
--.loader
--{
--    text-align: center;
--}
--.loader img
--{
--    margin:auto;
--    max-width:500px;
--    width:100%;
--    height:100%;
--}
--.no-loader
--{
--    display:none;
--}
--</style>
--
--<div class="loader">
--<img src="./images/meditation.gif">
--<p style="font-size:30px;letter-spacing: 1px;">LOADING</p>
--</div>
--
--<div class="no-loader">
--
--
--<!-- nav bar -->
--<style type="text/css">
--/*nav bar outer container*/
--.nav
--{
--    position: fixed;
--    color: #fff;
--    width: 100%;
--    overflow: hidden;
--    background: rgba(0,0,0,0.2);
--    z-index:999;
--    font-size: 25px;
--    height: 70px;
--    transition: 0.2s;
--    -moz-transition: 0.2s;
--    -ms-transition: 0.2s;
--    -webkit-transition: 0.2s;
--    -o-transition: 0.2s;
--
--}
--/*nav bar logo*/
--.nav .logo
--{
--    float:left;
--    width:80px;
--    text-align: center;
--}
--.nav .logo img
--{
--    margin-top: 10px;
--    margin-bottom: 10px;
--    width: 50px;
--    height: 50px;
--    background-color: #fff;
--    border-radius: 50%;
--    cursor:pointer;
--}
--/*nav on desktop*/
--.nav .big-links
--{
--    float: right;
--}
--.nav .big-links .part
--{
--    float:right;
--    text-align: center;
--    cursor: pointer;
--    margin-top:15px;
--    margin-right: 10px;
--}
--.nav .big-links .part:hover
--{
--    border-bottom: 2px solid #fff;
--    border-radius: 2px;
--}
--/*the non ghost css for nav*/
--.active-nav
--{
--    background: #202020;
--    transition: 0.2s;
--    -moz-transition: 0.2s;
--    -ms-transition: 0.2s;
--    -webkit-transition: 0.2s;
--    -o-transition: 0.2s;
--
--}
--/*toggle menu icon on mobile nav*/
--.container {
--    float: right;
--    text-align: center;
--    margin-top: 15px;
--    width: 50px;
--    cursor: pointer;
--}
--
--.bar1, .bar2, .bar3 {
--    width: 35px;
--    height: 5px;
--    background-color: #fff;
--    margin: 6px 0;
--    transition: 0.4s;
--    -moz-transition: 0.4s;
--    -ms-transition: 0.4s;
--    -webkit-transition: 0.4s;
--    -o-transition: 0.4s;
--}
--
--.change .bar1 {
--    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
--    transform: rotate(-45deg) translate(-9px, 6px);
--}
--
--.change .bar2 {opacity: 0;}
--
--.change .bar3 {
--    -webkit-transform: rotate(45deg) translate(-8px, -8px);
--    transform: rotate(45deg) translate(-8px, -8px);
--}
--/*nav on phone*/
--.small-links .part
--{
--    width:100%;
--    text-align: center;
--    height: 60px;
--}
--
--@media screen and ( min-width: 620px ) 
--{
--.nav .small-links
--{
--    display: none;
--}
--.nav .big-links
--{
--    display: block;
--}
--.nav .small-links-opener
--{
--    display: none;
--}
--}
--@media screen and ( max-width: 620px ) 
--{
--.nav .small-links
--{
--    display: block;
--}
--.nav .big-links
--{
--    display: none;
--}
--.nav .small-links-opener
--{
--    display: block;
--}
--.w3-padding-64
--{
--    padding-top:20px !important;
--    padding-bottom: 10px !important;
--}
--#resume_button
--{
--    margin-bottom: 20px;
--    margin-top:10px;
--}
--
--}
--</style>
--<div class="w3-container nav">
--    <div class="w3-container">
--        <div class="logo">
--            <img src="./images/relax.gif" id="topFunction" onclick="closeFunction(this)">
--        </div>
--        <div class="big-links">
--            <a href="#conta" style="color: #fff"><div class="part" style="width: 95px;">Contact</div></a>
--            <a href="#gallery" style="color: #fff"><div class="part" style="width: 80px;">Gallery</div></a>
--            <a href="#work" style="color: #fff"><div class="part" style="width: 120px;">Activities</div></a>
--            <a href="#about" style="color: #fff"><div class="part" style="width: 80px;">About</div></a>
--        </div>
--        <div class="container small-links-opener" onclick="myFunction(this)">
--            <div class="bar1"></div>
--            <div class="bar2"></div>
--            <div class="bar3"></div>
--        </div>
--    </div>
--    <div class="small-links">
--        <a href="#about" style="color: #fff"><div class="part" onclick="closeFunction(this)">About</div></a>
--        <a href="#work" style="color: #fff"><div class="part" onclick="closeFunction(this)">Activities</div></a>
--        <a href="#gallery" style="color: #fff"><div class="part" onclick="closeFunction(this)">Gallery</div></a>
--        <a href="#conta" style="color: #fff"><div class="part" onclick="closeFunction(this)">Contact</div></a>
--    </div>
--</div>
--<script type="text/javascript">
--//scrolling effect by adding and removing css classes
--$(window).scroll(function () {
--    if ($(window).scrollTop() > 100) {
--        $(".nav").addClass('bounceInDown animated-fast');
--        $(".nav").addClass('active-nav');
--    }
--    else {
--        $(".nav").removeClass('bounceInDown animated-fast');
--        $(".nav").removeClass('active-nav');
--    }
--});
--
--// When the user clicks on the button, scroll to the top of the document
--$("#topFunction").click(function(){
--    window.scroll({
--        top:0,
--        left:0,
--        behavior:'smooth'
--    })
--});
--
--function closeFunction(x)
--{
--    $(".small-links-opener").removeClass("change");
--    $(".nav").css("height","70px");
--}
--
--
--//toggle open and close menu sign on mobile nav
--function myFunction(x) {
--    x.classList.toggle("change");
--    if($(".nav").css("height")=="70px")
--    {
--        $(".small-links").slideDown();
--        $(".nav").css("height","auto");
--    }
--    else
--    {
--        $(".small-links").fadeOut();
--            $(".nav").css("height","70px");
--    }
--}
--</script>
--<!-- /nav bar -->
--
--
--<!--other pages common css-->
--<style type="text/css">
--.black_button
--{
--	text-align: center;
--	height: 45px;
--	border: 2px solid #000 !important;
--	border:none;
--	background-color: #101010;
--	color: #ffffff;
--	transition: 0.3s ease-out;
--	-moz-transition: 0.3s ease-out;
--	-o-transition: 0.3s ease-out;
--	-webkit-transition: 0.3s ease-out;
--   	cursor: pointer;
--}
--.black_button:hover
--{
--	background-color: transparent;
--	color: #000000;
--	transition: 0.3s ease-out;
--	-moz-transition: 0.3s ease-out;
--	-o-transition: 0.3s ease-out;
--	-webkit-transition: 0.3s ease-out;
--}
--body
--{
--	background-image: url('./images/blue_mountain_background.jpg');
--	background-repeat: no-repeat;
--	background-attachment: fixed;
--	background-size: cover;
--	margin: 0px;
--	padding: 0px;
--}
--.border_top
--{
--	border-top: 2px solid #000000;
--	width:50px;
--}
--.border_header
--{
--	font-size:30px;
--	font-family: Arial,Helvetica,sans-serif;
--}
--ul, li
--{
--  margin: 0px;
--  padding: 0px;
--  list-style-type: none;
--  float: left;
--  text-align: center;
--}
--</style>	
--
--<!--parallex-->
--<style type="text/css">
--.parallex
--{
--	width: 100%;
--	min-height: 400px;
--	height: auto;
--	text-align: center;
--	font-size: 50px;
--}
--.inside_center
--{
--	margin: auto;
--	text-align: center;
--	width:170px;
--}
--@media screen and (max-width:400px)
--{
--#madhu
--{
--font-size:30px;
--letter-spacing: normal;
--font-family: Arial,Helvetica,sans-serif;
--}
--}
--}
--#madhu
--{
--	letter-spacing: 3px;
--}
--</style>
--
--<div class="parallex" style="padding-top: 80px;padding-bottom: 30px;overflow: hidden;">
--	<img src="./images/ezgif.com-gif-maker.gif" style="max-width: 250px; height: auto;width: auto;margin-bottom: 20px;">
--	<div id="madhu" class="w3-margin-bottom"><b>OSHO MADHUSHALA</b></div>
--	<a href="#about">
--		<div class="black_button" style="padding-left:2px;border-radius:50%;font-size:35px !important;margin:auto;width:50px;height:50px;text-align: center;"><i class="fa fa-angle-down"></i></div>
--	</a>
--</div>
--<!-- /parallex -->
--
--<!-- about -->
--<style type="text/css">
--.index_about
--{
--	background-color: #fff;
--}
--.self-image
--{
--	text-align:center;
--}
--.content
--{
--    font-size: 18px;
--    width:100%;
--}
--.padding_10
--{
--    padding-left: 10%;
--    padding-right: 10%;
--}
--@media screen and ( max-width: 830px ) 
--{
--    .padding_10
--    {
--        padding-left: 0px !important;
--        padding-right: 0px !important;
--    }
--}
--</style>
--<div class="w3-container w3-padding-64 padding_10 index_about">
--    <div id="about"></div>
--    <div class="w3-container self-image w3-third">
--        <br>
--        <img src="./images/relax.gif" style="width: 100%; height: auto;"><br>
--        <br>
--    </div>
--    <div class="w3-container w3-rest">
--      <div class="border_top">
--			<br>
--		</div>
--		<div class="border_header">
--			<b>ABOUT <br>US</b>
--		</div>
--		<p class="content" style="text-align: justify;">
--			Osho Madhushala is a place for meditation and where people can meet their true selves. Osho Madhushala was founded in 1980
--			 by swami Chandermoli Jii. The Osho Madhushala Foundation is licensed under Osho International.
--			  Here we organize daily sessions from 6:00 AM to 8:00 PM for osho meditations. Currently Osho Madhushala is lead by Swami Aantar Muni.
-- 			We do also organise some perodic festivals for meditation purposes with daily meditation. 
--		</p>
--		<br>
--		<div class="black_button w3-padding open-modal-a" data-modal="#modal1-a" style="width: 160px;font-size: 18px">Read More <i class="fa fa-angle-right"></i></div>
--		<br>
--    </div>
--</div>
--<style>
--
--.title-a
--{
--color:#3171d8;
--font-size:25px;
--}
--.content-a p
--{
--font-size:18px;
--}
--
--.close-modal-a
--{
--background-color:#e88651;
--padding:10px;
--margin:5px;
--color:#fff;
--font-size:18px;
--text-decoration:none;
--width:100px;
--border-radius:3px;
--text-transform:uppercase;
--letter-spacing:2px;
--}
--.close-modal-a:hover
--{
--	background-color: tomato;
--}
--.overlay-a {
--  width: 100%;
--  min-height: 100vh;
--  display: flex;
--  justify-content: center;
--  align-items: center;
--  flex-direction: column;
--  padding: 40px;
--  position: fixed;
--  top: 0;
--  left: 0;
--  background: rgba(0, 0, 0, 0.75);
--  opacity: 0;
--  z-index: 5000;
--  pointer-events: none;
--  transition: 0.35s ease-in-out;
--  max-height: 100vh;
--  overflow-y: auto;
--}
--.overlay-a.open-a {
--  opacity: 1;
--  pointer-events: inherit;
--}
--.overlay-a .modal-a {
--  background: white;
--  text-align: center;
--  padding: 40px 80px;
--  box-shadow: 0px 1px 10px rgba(255, 255, 255, 0.35);
--  opacity: 0;
--  z-index: 5000;
--  pointer-events: none;
--  transition: 0.35s ease-in-out;
--  max-height: 100vh;
--  overflow-y: auto;
--}
--.overlay-a .modal-a.open-a {
--  opacity: 1;
--  pointer-events: inherit;
--}
--.overlay-a .modal-a.open-a .content-a {
--  transform: translate(0, 0px);
--  opacity: 1;
--}
--.overlay-a .modal-a .content-a {
--  transform: translate(0, -10px);
--  opacity: 0;
--  transition: 0.35s ease-in-out;
--}
--.overlay-a .modal-a .title-a {
--  margin-top: 0;
--}
--@media screen and ( max-width: 650px )
--{
--	#osho-about-quote-photo
--	{
--		display: none;
--	}
--	.osho-about-quote-photo
--	{
--		height:100px;
--		width: 100%;
--	}
--	.overlay-a, #modal1-a
--	{
--		padding-left: 5px !important;
--		padding-right: 5px !important;
--		padding-top: 10px !important;
--		padding-bottom: 10px !important;
--
--	}
--}
--</style>
--
--
--<div class='modal-a' id='modal1-a'>
--	<div class='content-a'>
--		<div class='title-a'>About Us<a class='close-modal-a' style="width:50px;color:#fff; float:right;padding:5px;border-radius: 5px;" data-modal="#modal1-a" href="#">X</a></div>
--<hr>
--
--<div class=" w3-round w3-text-white osho-about-quote-photo w3-padding-64" style="background:url(./images/osho050-585x390.jpg);background-size:cover;background-repeat:no-repeat;">
--<strong class="w3-margin w3-paddding" id="osho-about-quote-photo">
--<center>
--	<h5>
--<i class="fa fa-quote-left w3-text-grey"></i> Osho defies categorization. His thousands of talks cover<br>
-- everything from the individual quest for meaning <br>
-- to the most urgent social and political issues<br> facing society today.
--  <i class="fa fa-quote-right w3-text-grey"></i>
--</h5>
-- </center>
--</strong>
--</div>
--		<p style="width:200px;color:#101010">
--				<h5 class="w3-justify">
--Osho’s books are not written but are transcribed from audio and video recordings of his extemporaneous talks to international audiences. As he puts it, “So remember: whatever I am saying is not just for you... I am talking also for the future generations.”  Osho has been described by the Sunday Times in London as one of the “1000 Makers of the 20th Century” and by American author Tom Robbins as “the most dangerous man since Jesus Christ.” Sunday Mid-Day (India) has selected Osho as one of ten people – along with Gandhi, Nehru and Buddha – who have changed the destiny of India. About his own work Osho has said that he is helping to create the conditions for the birth of a new kind of human being. He often characterizes this new human being as “Zorba the Buddha” – capable both of enjoying the earthy pleasures of a Zorba the Greek and the silent serenity of a Gautama the Buddha. Running like a thread through all aspects of Osho’s talks and meditations is a vision that encompasses both the timeless wisdom of all ages past and the highest potential of today’s (and tomorrow’s) science and technology.
--<br>
--<br>
--Osho is known for his revolutionary contribution to the science of inner transformation, with an approach to meditation that acknowledges the accelerated pace of contemporary life. His unique OSHO Active Meditations are designed to first release the accumulated stresses of body and mind, so that it is then easier to take an experience of stillness and thought-free relaxation into daily life.
--</h5>
--<script>
--$(document).ready(function(){
--	$("#show_meditate").click(function(){
--		$("#meditation").show();
--	});
--});
--</script>
--
--<a name="med"><h4 id="show_meditate" style="cursor:pointer;color:#101010"><strong>What is "Meditation" ?</strong></h4></a>
--<h5 class="w3-justify" id="meditation" style="display:none">
--Meditation is a simple process
--Of watching your own mind.
--Not fighting with the mind
--Not trying to control it either
--Just remaining there, a choiceless witness.
--Whatsoever passes you simply take note of it With no prejudice for or against.
--You don't call it names
--That this should not come to my mind
--That this is an ugly thought and
--This is a very beautiful and virtuous thought.
--You should not judge
--You should remain non-judgmental
--Because the moment you judge, you lose meditation.
--You become identified.
--Either you become a friend or you become a foe.
--You create relationships.
--Meditation means
--Remaining unrelated with your thought process Utterly unrelated, cool, calm Watching whatsoever is passing.
--And then a miracle happens:
--Slowly slowly one becomes aware
--That less and less thoughts are passing.
--The more alert you are, the less thoughts pass The less alert you are, the more thoughts pass.
--It is as if traffic depends on your awareness.
-- </h5>
--
-- <script>
--$(document).ready(function(){
--	$("#why_meditate").click(function(){
--		$("#why_meditate_a").show();
--	});
--});
--</script>
--
--<a name="why"> <h4 id="why_meditate" style="cursor:pointer;color:#101010"><strong>Why Meditate ?</strong></h4></a>
--<h5 class="w3-justify" id="why_meditate_a" style="display:none;">
--Meditation is a way of settling in oneself, at the innermost core of your being. Once you have found the center of your existence, you will have found both your roots and your wings.
--<br> 
--The roots are in existence, making you a more integrated human being, an individual. And the wings are in the fragrance that is released by being in contact with existence. The fragrance consists of freedom, love, compassion, authenticity, sincerity, a sense of humor, and a tremendous feeling of blissfulness.
--</h5>
--
--<br>
--
--<h4>Want to know more, click here : <strong><u><a style="color:#101010" href="http://www.osho.com/allaboutosho" target="_blank">All About Osho</a></u></strong></h4>
--		</p>
--		<a class='close-modal-a' data-modal="#modal1-a" href="#">Okay</a>
--	</div>	
--</div>	
--
--<script>
--$(".modal-a").each( function(){
--	$(this).wrap('<div class="overlay-a"></div>')
--});
--
--$(".open-modal-a").on('click', function(e){
--	e.preventDefault();
--	e.stopImmediatePropagation;
--	
--	var $this = $(this),
--			modal = $($this).data("modal");
--	
--	$(modal).parents(".overlay-a").addClass("open-a");
--	setTimeout( function(){
--		$(modal).addClass("open-a");
--	}, 350);
--	
--	$(document).on('click', function(e){
--		var target = $(e.target);
--		
--		if ($(target).hasClass("overlay-a")){
--			$(target).find(".modal-a").each( function(){
--				$(this).removeClass("open-a");
--			});
--			setTimeout( function(){
--				$(target).removeClass("open-a");
--			}, 350);
--		}
--		
--	});
--	
--});
--
--$(".close-modal-a").on('click', function(e){
--	e.preventDefault();
--	e.stopImmediatePropagation;
--	
--	var $this = $(this),
--			modal = $($this).data("modal");
--	
--	$(modal).removeClass("open-a");
--	setTimeout( function(){	
--		$(modal).parents(".overlay-a").removeClass("open-a");
--	}, 350);
--	
--});	
--</script>
--<!-- /about -->
--
--
--<!-- work -->
--<style type="text/css">
--.meditation-session , .meditation-festival, .routine-meditation, .chocolate, .music, .dance
--{
--	background-color: #fff;
--	text-align: center;
--	width:300px;
--	height:440px;
--	overflow: hidden;
--	padding: 10px;
--	margin: 10px;
--}
--.activity-container
--{
--	display: flex;
--	justify-content: center;
--	flex-wrap: wrap;	
--}
--</style>
--<div class="w3-container w3-padding-64 padding_10">
--	<div id="work"></div>
--	<div class="border_top">
--		<br>
--	</div>
--	<div class="border_header">
--		<b>ACTIVITIES</b>
--	</div>
--	<br>
--	<div class="w3-container activity-container">
--		<div class="meditation-session w3-margin-bottom" id="one-one">
--			<img id="one-img" src="./images/1.gif" style="width:100%;height:auto">
--			<h3>Meditation Session</h3>
--			<h4>1h | ₹1,000</h4>
--			<div id="one-three">
--				<br><br>
--			</div>
--			<h6 class="w3-justify" id="one-two">
--				If you want to live a more fulfilled life, first you want to know your potential, who you really are. Meditation is the route to that knowing. It is the methodology of the science of awareness. This course is set for enrolment in these meditation sessions. The meditation session can be attended publicly or can also be held private for your convience.
--			</h6>
--				<button type="submit" class="black_button" style="width: 150px">Book&nbsp;&nbsp;<i class="fa fa-thumb-tack"></i></button>
--		</div>
--		<script type="text/javascript">
--			$("#one-two").hide();
--			$("#one-one").mouseenter(function(){
--				$("#one-three").slideUp(100);				
--				$("#one-img").slideUp(100);
--				$("#one-two").delay(100).fadeIn(500);
--			});
--			$("#one-one").mouseleave(function(){
--				$("#one-two").slideUp(100);				
--				$("#one-three").delay(100).fadeIn(500);
--				$("#one-img").delay(100).fadeIn(500);
--			});
--		</script>
--		<div class="routine-meditation w3-margin-bottom" id="two-one">
--			<img src="./images/meditation1.gif" style="width:100%;height:auto" id="two-img">
--			<h3>Daily Meditation</h3>
--			<h4>1h | ₹1,000</h4>
--			<div id="two-three">
--				<br><br>
--			</div>
--			<h6 class="w3-justify" id="two-two">
--				Many meditative techniques require one to sit still and silent. But for most of us accumulated stress in our bodymind makes that difficult. Before we can hope to access our inner powerhouse of consciousness, we need to let go of our tensions. Thereby we have introduced meditation sessions on daily bases, which will let you live to the fullest of yourself.
--			</h6>
--			<button type="submit" class="black_button" style="width: 150px">Book&nbsp;&nbsp;<i class="fa fa-thumb-tack"></i></button>
--		</div>
--		<script type="text/javascript">
--			$("#two-two").hide();
--			$("#two-one").mouseenter(function(){
--				$("#two-three").slideUp(100);				
--				$("#two-img").slideUp(100);
--				$("#two-two").delay(100).fadeIn(500);
--			});
--			$("#two-one").mouseleave(function(){
--				$("#two-two").slideUp(100);				
--				$("#two-three").delay(100).fadeIn(500);
--				$("#two-img").delay(100).fadeIn(500);
--			});
--		</script>
--
--		<div class="meditation-festival w3-margin-bottom" id="three-one">
--			<img src="./images/yoga_drib01.gif" style="width:100%;height:auto" id="three-img">
--			<h3>Meditation Festival</h3>
--			<h4>1h | ₹1,000</h4>
--			<div id="three-three">
--				<br><br>
--			</div>
--			<h6 class="w3-justify" id="three-two">
--				Special occasions happens here too, every day is a special gift, thereby we celebrate the gift of joy periodically throughout the year like a festival. Meditation will make you more alive and sensitive; your life will become richer. Watch out. Always remember that if you are moving in the right direction, you will go on flowering, we will help you achieve that.
--			</h6>
--				<button type="submit" class="black_button" style="width: 150px">Book&nbsp;&nbsp;<i class="fa fa-thumb-tack"></i></button>
--		</div>
--		<script type="text/javascript">
--			$("#three-two").hide();
--			$("#three-one").mouseenter(function(){
--				$("#three-three").slideUp(100);				
--				$("#three-img").slideUp(100);
--				$("#three-two").delay(100).fadeIn(500);
--			});
--			$("#three-one").mouseleave(function(){
--				$("#three-two").slideUp(100);				
--				$("#three-three").delay(100).fadeIn(500);
--				$("#three-img").delay(100).fadeIn(500);
--			});
--		</script>
--	</div>
--
--</div>
--<!-- /work -->
--
--<!--instagram container-->
--<style type="text/css">
--.instagram
--{
--	background-color: #fff;
--}
--</style>
--
--<div class="w3-container w3-padding-64 instagram padding_10">
--	<div id="gallery"></div>
--	<div class="border_top">
--		<br>
--	</div>
--	<div class="border_header">
--		<b>GALLERY</b>
--	</div>
--	<hr>
--<!--instagram live feed api pixlee-->
--<div id="pixlee_container"></div><script type="text/javascript">window.PixleeAsyncInit = function() {Pixlee.init({apiKey:'XvgW6U37E4c1a9Cj1gb'});Pixlee.addSimpleWidget({widgetId:'5618'});};</script><script src="//instafeed.assets.pixlee.com/assets/pixlee_widget_1_0_0.js"></script>
--	<hr>
--	<br>
--</div>
--
--
--
--
--
--
--
--
--
--
--
--
--
--
--
--<div id="conta"></div>
--
--<!-- footer -->
--<style type="text/css">
--.footer
--{
--    background-color: #57bbbf;
--    width:100%;
--    color: #eee;
--    height:auto;
--    text-align: center;
--    font-size: 20px;
--}
--.social-media
--{
--    text-align: center;
--}
--.social-media img
--{
--    max-width: 50px;
--    width:100%;
--    height:auto;
--    margin:20px;
--    cursor: pointer;
--}
--</style>
--<div class="w3-container footer w3-padding-32 w3-text-black padding_10">
--	<div class="W3-container w3-half">
--		<span style="font-size: 22px"><b>Osho Madhushala </b></span><br>
--		2150 narela mandi extension <br>
--		delhi - 110040
--		<br>
--		<div class="w3-margin-bottom"></div>
--		Tel: +91 98 11 466360<br>
--		<div class="w3-margin-bottom"></div>
--		Email : antarmuni@gmail.com<br>
--		<br>
--	</div>
--	<div class="w3-container w3-half">
--		    	<div class="black_button w3-center" style="width: 140px;height:40px;padding-top:3px;margin:auto;">Query <i class="fa fa-question"></i></div><br>
--		<span style="font-size: 22px"><b>Social Media & Other</b></span>
--    	
--	    <div class="social-media">
--    	    <a href="https://www.facebook.com/oshomadhushala.narela" target="_blank"><img src="./images/facebook.svg"/></a>
--        	<a href="https://www.instagram.com/osho_madhushala/" target="_blank"><img src="./images/instagram.svg"/></a>
--        	<a href="https://twitter.com/oshomadhushala" target="_blank"><img src="./images/twitter.svg"/></a>
--        	<a href="https://www.youtube.com/channel/UCnU_F63NHDSzIo1zZdkYAuQ" target="_blank"><img src="./images/youtube.svg"/></a>
--<style>
--
--.title
--{
--color:#3171d8;
--font-size:25px;
--}
--.content p
--{
--font-size:18px;
--}
--
--.close-modal
--{
--background-color:#e88651;
--padding:10px;
--margin:5px;
--color:#fff;
--font-size:18px;
--text-decoration:none;
--width:100px;
--border-radius:3px;
--text-transform:uppercase;
--letter-spacing:2px;
--}
--.close-modal
--{
--background-color: tomato;
--}
--.overlay {
--  width: 100%;
--  min-height: 100vh;
--  display: flex;
--  justify-content: center;
--  align-items: center;
--  flex-direction: column;
--  padding: 40px;
--  position: fixed;
--  top: 0;
--  left: 0;
--  background: rgba(0, 0, 0, 0.75);
--  opacity: 0;
--  pointer-events: none;
--  transition: 0.35s ease-in-out;
--  max-height: 100vh;
--  overflow-y: auto;
--}
--.overlay.open {
--  opacity: 1;
--  pointer-events: inherit;
--}
--.overlay .modal {
--  background: white;
--  text-align: center;
--  padding: 40px 80px;
--  box-shadow: 0px 1px 10px rgba(255, 255, 255, 0.35);
--  opacity: 0;
--  pointer-events: none;
--  transition: 0.35s ease-in-out;
--  max-height: 100vh;
--  overflow-y: auto;
--}
--.overlay .modal.open {
--  opacity: 1;
--  pointer-events: inherit;
--}
--.overlay .modal.open .content {
--  transform: translate(0, 0px);
--  opacity: 1;
--}
--.overlay .modal .content {
--  transform: translate(0, -10px);
--  opacity: 0;
--  transition: 0.35s ease-in-out;
--}
--.overlay .modal .title {
--  margin-top: 0;
--}
--</style>
--
--
--<img src="./images/whatsapp.svg" class="open-modal" data-modal="#modal1">
--
--<div class='modal' id='modal1'>
--	<div class='content'>
--		<div class='title'>Whatsapp Number</div>
--<hr>
--		<p style="width:200px;color:#101010">
--				+91 98 11 466360
--		</p>
--		<a class='close-modal' data-modal="#modal1" href="#">Okay</a>
--	</div>	
--</div>	
--
--<script>
--$(".modal").each( function(){
--	$(this).wrap('<div class="overlay"></div>')
--});
--
--$(".open-modal").on('click', function(e){
--	e.preventDefault();
--	e.stopImmediatePropagation;
--	
--	var $this = $(this),
--			modal = $($this).data("modal");
--	
--	$(modal).parents(".overlay").addClass("open");
--	setTimeout( function(){
--		$(modal).addClass("open");
--	}, 350);
--	
--	$(document).on('click', function(e){
--		var target = $(e.target);
--		
--		if ($(target).hasClass("overlay")){
--			$(target).find(".modal").each( function(){
--				$(this).removeClass("open");
--			});
--			setTimeout( function(){
--				$(target).removeClass("open");
--			}, 350);
--		}
--		
--	});
--	
--});
--
--$(".close-modal").on('click', function(e){
--	e.preventDefault();
--	e.stopImmediatePropagation;
--	
--	var $this = $(this),
--			modal = $($this).data("modal");
--	
--	$(modal).removeClass("open");
--	setTimeout( function(){	
--		$(modal).parents(".overlay").removeClass("open");
--	}, 350);
--	
--});	
--</script>
--    	</div>
--
--    </div>
--</div>
--
--<!-- /footer -->
--
--<!-- scroll to section -->
--<script type="text/javascript">
--$(document).on('click', 'a[href^="#"]', function (event) {
--    event.preventDefault();
--
--    $('html, body').animate({
--        scrollTop: $($.attr(this, 'href')).offset().top - 100
--    }, 500);
--});
--</script>
--<!-- /scroll to section -->
--
--<!-- animation style -->
--<style type="text/css">
--.bounceInDown {
--    -webkit-animation-name: bounceInDown;
--    animation-name: bounceInDown;
--}
--.animated-fast {
--    -webkit-animation-duration: 0.7s;
--    animation-duration: 0.7s;
--    -webkit-animation-fill-mode: both;
--    animation-fill-mode: both;
--}
--.animated {
--    -webkit-animation-duration: 1s;
--    animation-duration: 1s;
--    -webkit-animation-fill-mode: both;
--    animation-fill-mode: both;
--}
--@keyframes bounceInDown
--{
--0%, 60%, 75%, 90%, 100% {
--    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
--    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
--}
--0% {
--    opacity: 0;
--    -webkit-transform: translate3d(0, -3000px, 0);
--    transform: translate3d(0, -3000px, 0);
--}   
--60% {
--    opacity: 1;
--    -webkit-transform: translate3d(0, 25px, 0);
--    transform: translate3d(0, 25px, 0);
--}
--75% {
--    -webkit-transform: translate3d(0, -10px, 0);
--    transform: translate3d(0, -10px, 0);
--}
--90% {
--    -webkit-transform: translate3d(0, 5px, 0)
-- ;   transform: translate3d(0, 5px, 0);
--}
--100% {
--    -webkit-transform: none;
--    transform: none;
--}
--}
--
--@keyframes homeImgAnimation
--{
--0% {
--    -webkit-transform: rotate(4deg);
--    transform: rotate(5deg);
--}
--50% {
--    -webkit-transform: rotate(-4deg);
--    transform: rotate(-5deg);
--}
--100% {
--    -webkit-transform: rotate(4deg);
--    transform: rotate(5deg);
--}
--}
--</style>
--<!-- /animation style -->
--
--
--
--</div>
--<script type="text/javascript">
--$(document).ready(function(){
--    $(".loader").delay(1000).fadeOut();
--    $(".no-loader").delay(1500).fadeIn();
--});
--</script>
--
--
--</body>
--</html> 
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="./images/ezgif.com-gif-maker.gif">
+    <title>Osho Madhushala</title>
+
+    <!-- view port and encoding type-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <!-- /viewport and encoding type -->
+
+    <!-- google jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- /google jquery cdn -->
+
+    <!-- w3schools w3.css stylesheet link -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- /w3schools w3.css stylesheet link -->
+
+    <!-- fontawesome cdn -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- /fontawesome cdn -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+</head>
+<style type="text/css">
+
+/*
+funcky cartoonist - font-family: 'Gaegu', cursive;
+*/
+@import url('https://fonts.googleapis.com/css?family=Gaegu');
+
+/*
+main sirill - font-family: 'Poiret One', cursive;
+main normal - font-family: 'Quattrocento Sans', sans-serif;
+cursive - font-family: 'Satisfy', cursive;
+plain bold headers - font-family: 'Concert One', cursive;
+*/
+@import url('https://fonts.googleapis.com/css?family=Concert+One|Poiret+One|Quattrocento+Sans|Satisfy');
+
+body
+{
+    font-family: 'Quattrocento Sans', sans-serif;
+}
+a
+{
+    color: #fff;
+    margin:0px;
+    padding:0px;
+    text-decoration: none;
+}
+a:hover
+{
+    color: #fff;
+}
+</style>
+
+<body>
+
+<style type="text/css">
+.loader
+{
+    text-align: center;
+}
+.loader img
+{
+    margin:auto;
+    max-width:500px;
+    width:100%;
+    height:100%;
+}
+.no-loader
+{
+    display:none;
+}
+</style>
+
+<div class="loader">
+<img src="./images/meditation.gif">
+<p style="font-size:30px;letter-spacing: 1px;">LOADING</p>
+</div>
+
+<div class="no-loader">
+
+
+<!-- nav bar -->
+<style type="text/css">
+/*nav bar outer container*/
+.nav
+{
+    position: fixed;
+    color: #fff;
+    width: 100%;
+    overflow: hidden;
+    background: rgba(0,0,0,0.2);
+    z-index:999;
+    font-size: 25px;
+    height: 70px;
+    transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+
+}
+/*nav bar logo*/
+.nav .logo
+{
+    float:left;
+    width:80px;
+    text-align: center;
+}
+.nav .logo img
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor:pointer;
+}
+/*nav on desktop*/
+.nav .big-links
+{
+    float: right;
+}
+.nav .big-links .part
+{
+    float:right;
+    text-align: center;
+    cursor: pointer;
+    margin-top:15px;
+    margin-right: 10px;
+}
+.nav .big-links .part:hover
+{
+    border-bottom: 2px solid #fff;
+    border-radius: 2px;
+}
+/*the non ghost css for nav*/
+.active-nav
+{
+    background: #202020;
+    transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+
+}
+/*toggle menu icon on mobile nav*/
+.container {
+    float: right;
+    text-align: center;
+    margin-top: 15px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+/*nav on phone*/
+.small-links .part
+{
+    width:100%;
+    text-align: center;
+    height: 60px;
+}
+
+@media screen and ( min-width: 620px ) 
+{
+.nav .small-links
+{
+    display: none;
+}
+.nav .big-links
+{
+    display: block;
+}
+.nav .small-links-opener
+{
+    display: none;
+}
+}
+@media screen and ( max-width: 620px ) 
+{
+.nav .small-links
+{
+    display: block;
+}
+.nav .big-links
+{
+    display: none;
+}
+.nav .small-links-opener
+{
+    display: block;
+}
+.w3-padding-64
+{
+    padding-top:20px !important;
+    padding-bottom: 10px !important;
+}
+#resume_button
+{
+    margin-bottom: 20px;
+    margin-top:10px;
+}
+
+}
+</style>
+<div class="w3-container nav">
+    <div class="w3-container">
+        <div class="logo">
+            <img src="./images/relax.gif" id="topFunction" onclick="closeFunction(this)">
+        </div>
+        <div class="big-links">
+            <a href="#conta" style="color: #fff"><div class="part" style="width: 95px;">Contact</div></a>
+            <a href="#gallery" style="color: #fff"><div class="part" style="width: 80px;">Gallery</div></a>
+            <a href="#work" style="color: #fff"><div class="part" style="width: 120px;">Activities</div></a>
+            <a href="#about" style="color: #fff"><div class="part" style="width: 80px;">About</div></a>
+        </div>
+        <div class="container small-links-opener" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </div>
+    <div class="small-links">
+        <a href="#about" style="color: #fff"><div class="part" onclick="closeFunction(this)">About</div></a>
+        <a href="#work" style="color: #fff"><div class="part" onclick="closeFunction(this)">Activities</div></a>
+        <a href="#gallery" style="color: #fff"><div class="part" onclick="closeFunction(this)">Gallery</div></a>
+        <a href="#conta" style="color: #fff"><div class="part" onclick="closeFunction(this)">Contact</div></a>
+    </div>
+</div>
+<script type="text/javascript">
+//scrolling effect by adding and removing css classes
+$(window).scroll(function () {
+    if ($(window).scrollTop() > 100) {
+        $(".nav").addClass('bounceInDown animated-fast');
+        $(".nav").addClass('active-nav');
+    }
+    else {
+        $(".nav").removeClass('bounceInDown animated-fast');
+        $(".nav").removeClass('active-nav');
+    }
+});
+
+// When the user clicks on the button, scroll to the top of the document
+$("#topFunction").click(function(){
+    window.scroll({
+        top:0,
+        left:0,
+        behavior:'smooth'
+    })
+});
+
+function closeFunction(x)
+{
+    $(".small-links-opener").removeClass("change");
+    $(".nav").css("height","70px");
+}
+
+
+//toggle open and close menu sign on mobile nav
+function myFunction(x) {
+    x.classList.toggle("change");
+    if($(".nav").css("height")=="70px")
+    {
+        $(".small-links").slideDown();
+        $(".nav").css("height","auto");
+    }
+    else
+    {
+        $(".small-links").fadeOut();
+            $(".nav").css("height","70px");
+    }
+}
+</script>
+<!-- /nav bar -->
+
+
+<!--other pages common css-->
+<style type="text/css">
+.black_button
+{
+	text-align: center;
+	height: 45px;
+	border: 2px solid #000 !important;
+	border:none;
+	background-color: #101010;
+	color: #ffffff;
+	transition: 0.3s ease-out;
+	-moz-transition: 0.3s ease-out;
+	-o-transition: 0.3s ease-out;
+	-webkit-transition: 0.3s ease-out;
+   	cursor: pointer;
+}
+.black_button:hover
+{
+	background-color: transparent;
+	color: #000000;
+	transition: 0.3s ease-out;
+	-moz-transition: 0.3s ease-out;
+	-o-transition: 0.3s ease-out;
+	-webkit-transition: 0.3s ease-out;
+}
+body
+{
+	background-image: url('./images/blue_mountain_background.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	margin: 0px;
+	padding: 0px;
+}
+.border_top
+{
+	border-top: 2px solid #000000;
+	width:50px;
+}
+.border_header
+{
+	font-size:30px;
+	font-family: Arial,Helvetica,sans-serif;
+}
+ul, li
+{
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  float: left;
+  text-align: center;
+}
+</style>	
+
+<!--parallex-->
+<style type="text/css">
+.parallex
+{
+	width: 100%;
+	min-height: 400px;
+	height: auto;
+	text-align: center;
+	font-size: 50px;
+}
+.inside_center
+{
+	margin: auto;
+	text-align: center;
+	width:170px;
+}
+@media screen and (max-width:400px)
+{
+#madhu
+{
+font-size:30px;
+letter-spacing: normal;
+font-family: Arial,Helvetica,sans-serif;
+}
+}
+}
+#madhu
+{
+	letter-spacing: 3px;
+}
+</style>
+
+<div class="parallex" style="padding-top: 80px;padding-bottom: 30px;overflow: hidden;">
+	<img src="./images/ezgif.com-gif-maker.gif" style="max-width: 250px; height: auto;width: auto;margin-bottom: 20px;">
+	<div id="madhu" class="w3-margin-bottom"><b>OSHO MADHUSHALA</b></div>
+	<a href="#about">
+		<div class="black_button" style="padding-left:2px;border-radius:50%;font-size:35px !important;margin:auto;width:50px;height:50px;text-align: center;"><i class="fa fa-angle-down"></i></div>
+	</a>
+</div>
+<!-- /parallex -->
+
+<!-- about -->
+<style type="text/css">
+.index_about
+{
+	background-color: #fff;
+}
+.self-image
+{
+	text-align:center;
+}
+.content
+{
+    font-size: 18px;
+    width:100%;
+}
+.padding_10
+{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+@media screen and ( max-width: 830px ) 
+{
+    .padding_10
+    {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+}
+</style>
+<div class="w3-container w3-padding-64 padding_10 index_about">
+    <div id="about"></div>
+    <div class="w3-container self-image w3-third">
+        <br>
+        <img src="./images/relax.gif" style="width: 100%; height: auto;"><br>
+        <br>
+    </div>
+    <div class="w3-container w3-rest">
+      <div class="border_top">
+			<br>
+		</div>
+		<div class="border_header">
+			<b>ABOUT <br>US</b>
+		</div>
+		<p class="content" style="text-align: justify;">
+			Osho Madhushala is a place for meditation and where people can meet their true selves. Osho Madhushala was founded in 1980
+			 by swami Chandermoli Jii. The Osho Madhushala Foundation is licensed under Osho International.
+			  Here we organize daily sessions from 6:00 AM to 8:00 PM for osho meditations. Currently Osho Madhushala is lead by Swami Aantar Muni.
+ 			We do also organise some perodic festivals for meditation purposes with daily meditation. 
+		</p>
+		<br>
+		<div class="black_button w3-padding open-modal-a" data-modal="#modal1-a" style="width: 160px;font-size: 18px">Read More <i class="fa fa-angle-right"></i></div>
+		<br>
+    </div>
+</div>
+<style>
+
+.title-a
+{
+color:#3171d8;
+font-size:25px;
+}
+.content-a p
+{
+font-size:18px;
+}
+
+.close-modal-a
+{
+background-color:#e88651;
+padding:10px;
+margin:5px;
+color:#fff;
+font-size:18px;
+text-decoration:none;
+width:100px;
+border-radius:3px;
+text-transform:uppercase;
+letter-spacing:2px;
+}
+.close-modal-a:hover
+{
+	background-color: tomato;
+}
+.overlay-a {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  opacity: 0;
+  z-index: 5000;
+  pointer-events: none;
+  transition: 0.35s ease-in-out;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.overlay-a.open-a {
+  opacity: 1;
+  pointer-events: inherit;
+}
+.overlay-a .modal-a {
+  background: white;
+  text-align: center;
+  padding: 40px 80px;
+  box-shadow: 0px 1px 10px rgba(255, 255, 255, 0.35);
+  opacity: 0;
+  z-index: 5000;
+  pointer-events: none;
+  transition: 0.35s ease-in-out;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.overlay-a .modal-a.open-a {
+  opacity: 1;
+  pointer-events: inherit;
+}
+.overlay-a .modal-a.open-a .content-a {
+  transform: translate(0, 0px);
+  opacity: 1;
+}
+.overlay-a .modal-a .content-a {
+  transform: translate(0, -10px);
+  opacity: 0;
+  transition: 0.35s ease-in-out;
+}
+.overlay-a .modal-a .title-a {
+  margin-top: 0;
+}
+@media screen and ( max-width: 650px )
+{
+	#osho-about-quote-photo
+	{
+		display: none;
+	}
+	.osho-about-quote-photo
+	{
+		height:100px;
+		width: 100%;
+	}
+	.overlay-a, #modal1-a
+	{
+		padding-left: 5px !important;
+		padding-right: 5px !important;
+		padding-top: 10px !important;
+		padding-bottom: 10px !important;
+
+	}
+}
+</style>
+
+
+<div class='modal-a' id='modal1-a'>
+	<div class='content-a'>
+		<div class='title-a'>About Us<a class='close-modal-a' style="width:50px;color:#fff; float:right;padding:5px;border-radius: 5px;" data-modal="#modal1-a" href="#">X</a></div>
+<hr>
+
+<div class=" w3-round w3-text-white osho-about-quote-photo w3-padding-64" style="background:url(./images/osho050-585x390.jpg);background-size:cover;background-repeat:no-repeat;">
+<strong class="w3-margin w3-paddding" id="osho-about-quote-photo">
+<center>
+	<h5>
+<i class="fa fa-quote-left w3-text-grey"></i> Osho defies categorization. His thousands of talks cover<br>
+ everything from the individual quest for meaning <br>
+ to the most urgent social and political issues<br> facing society today.
+  <i class="fa fa-quote-right w3-text-grey"></i>
+</h5>
+ </center>
+</strong>
+</div>
+		<p style="width:200px;color:#101010">
+				<h5 class="w3-justify">
+Osho’s books are not written but are transcribed from audio and video recordings of his extemporaneous talks to international audiences. As he puts it, “So remember: whatever I am saying is not just for you... I am talking also for the future generations.”  Osho has been described by the Sunday Times in London as one of the “1000 Makers of the 20th Century” and by American author Tom Robbins as “the most dangerous man since Jesus Christ.” Sunday Mid-Day (India) has selected Osho as one of ten people – along with Gandhi, Nehru and Buddha – who have changed the destiny of India. About his own work Osho has said that he is helping to create the conditions for the birth of a new kind of human being. He often characterizes this new human being as “Zorba the Buddha” – capable both of enjoying the earthy pleasures of a Zorba the Greek and the silent serenity of a Gautama the Buddha. Running like a thread through all aspects of Osho’s talks and meditations is a vision that encompasses both the timeless wisdom of all ages past and the highest potential of today’s (and tomorrow’s) science and technology.
+<br>
+<br>
+Osho is known for his revolutionary contribution to the science of inner transformation, with an approach to meditation that acknowledges the accelerated pace of contemporary life. His unique OSHO Active Meditations are designed to first release the accumulated stresses of body and mind, so that it is then easier to take an experience of stillness and thought-free relaxation into daily life.
+</h5>
+<script>
+$(document).ready(function(){
+	$("#show_meditate").click(function(){
+		$("#meditation").show();
+	});
+});
+</script>
+
+<a name="med"><h4 id="show_meditate" style="cursor:pointer;color:#101010"><strong>What is "Meditation" ?</strong></h4></a>
+<h5 class="w3-justify" id="meditation" style="display:none">
+Meditation is a simple process
+Of watching your own mind.
+Not fighting with the mind
+Not trying to control it either
+Just remaining there, a choiceless witness.
+Whatsoever passes you simply take note of it With no prejudice for or against.
+You don't call it names
+That this should not come to my mind
+That this is an ugly thought and
+This is a very beautiful and virtuous thought.
+You should not judge
+You should remain non-judgmental
+Because the moment you judge, you lose meditation.
+You become identified.
+Either you become a friend or you become a foe.
+You create relationships.
+Meditation means
+Remaining unrelated with your thought process Utterly unrelated, cool, calm Watching whatsoever is passing.
+And then a miracle happens:
+Slowly slowly one becomes aware
+That less and less thoughts are passing.
+The more alert you are, the less thoughts pass The less alert you are, the more thoughts pass.
+It is as if traffic depends on your awareness.
+ </h5>
+
+ <script>
+$(document).ready(function(){
+	$("#why_meditate").click(function(){
+		$("#why_meditate_a").show();
+	});
+});
+</script>
+
+<a name="why"> <h4 id="why_meditate" style="cursor:pointer;color:#101010"><strong>Why Meditate ?</strong></h4></a>
+<h5 class="w3-justify" id="why_meditate_a" style="display:none;">
+Meditation is a way of settling in oneself, at the innermost core of your being. Once you have found the center of your existence, you will have found both your roots and your wings.
+<br> 
+The roots are in existence, making you a more integrated human being, an individual. And the wings are in the fragrance that is released by being in contact with existence. The fragrance consists of freedom, love, compassion, authenticity, sincerity, a sense of humor, and a tremendous feeling of blissfulness.
+</h5>
+
+<br>
+
+<h4>Want to know more, click here : <strong><u><a style="color:#101010" href="http://www.osho.com/allaboutosho" target="_blank">All About Osho</a></u></strong></h4>
+		</p>
+		<a class='close-modal-a' data-modal="#modal1-a" href="#">Okay</a>
+	</div>	
+</div>	
+
+<script>
+$(".modal-a").each( function(){
+	$(this).wrap('<div class="overlay-a"></div>')
+});
+
+$(".open-modal-a").on('click', function(e){
+	e.preventDefault();
+	e.stopImmediatePropagation;
+	
+	var $this = $(this),
+			modal = $($this).data("modal");
+	
+	$(modal).parents(".overlay-a").addClass("open-a");
+	setTimeout( function(){
+		$(modal).addClass("open-a");
+	}, 350);
+	
+	$(document).on('click', function(e){
+		var target = $(e.target);
+		
+		if ($(target).hasClass("overlay-a")){
+			$(target).find(".modal-a").each( function(){
+				$(this).removeClass("open-a");
+			});
+			setTimeout( function(){
+				$(target).removeClass("open-a");
+			}, 350);
+		}
+		
+	});
+	
+});
+
+$(".close-modal-a").on('click', function(e){
+	e.preventDefault();
+	e.stopImmediatePropagation;
+	
+	var $this = $(this),
+			modal = $($this).data("modal");
+	
+	$(modal).removeClass("open-a");
+	setTimeout( function(){	
+		$(modal).parents(".overlay-a").removeClass("open-a");
+	}, 350);
+	
+});	
+</script>
+<!-- /about -->
+
+
+<!-- work -->
+<style type="text/css">
+.meditation-session , .meditation-festival, .routine-meditation, .chocolate, .music, .dance
+{
+	background-color: #fff;
+	text-align: center;
+	width:300px;
+	height:440px;
+	overflow: hidden;
+	padding: 10px;
+	margin: 10px;
+}
+.activity-container
+{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;	
+}
+</style>
+<div class="w3-container w3-padding-64 padding_10">
+	<div id="work"></div>
+	<div class="border_top">
+		<br>
+	</div>
+	<div class="border_header">
+		<b>ACTIVITIES</b>
+	</div>
+	<br>
+	<div class="w3-container activity-container">
+		<div class="meditation-session w3-margin-bottom" id="one-one">
+			<img id="one-img" src="./images/1.gif" style="width:100%;height:auto">
+			<h3>Meditation Session</h3>
+			<h4>1h | ₹1,000</h4>
+			<div id="one-three">
+				<br><br>
+			</div>
+			<h6 class="w3-justify" id="one-two">
+				If you want to live a more fulfilled life, first you want to know your potential, who you really are. Meditation is the route to that knowing. It is the methodology of the science of awareness. This course is set for enrolment in these meditation sessions. The meditation session can be attended publicly or can also be held private for your convience.
+			</h6>
+				<button type="submit" class="black_button" style="width: 150px">Book&nbsp;&nbsp;<i class="fa fa-thumb-tack"></i></button>
+		</div>
+		<script type="text/javascript">
+			$("#one-two").hide();
+			$("#one-one").mouseenter(function(){
+				$("#one-three").slideUp(100);				
+				$("#one-img").slideUp(100);
+				$("#one-two").delay(100).fadeIn(500);
+			});
+			$("#one-one").mouseleave(function(){
+				$("#one-two").slideUp(100);				
+				$("#one-three").delay(100).fadeIn(500);
+				$("#one-img").delay(100).fadeIn(500);
+			});
+		</script>
+		<div class="routine-meditation w3-margin-bottom" id="two-one">
+			<img src="./images/meditation1.gif" style="width:100%;height:auto" id="two-img">
+			<h3>Daily Meditation</h3>
+			<h4>1h | ₹1,000</h4>
+			<div id="two-three">
+				<br><br>
+			</div>
+			<h6 class="w3-justify" id="two-two">
+				Many meditative techniques require one to sit still and silent. But for most of us accumulated stress in our bodymind makes that difficult. Before we can hope to access our inner powerhouse of consciousness, we need to let go of our tensions. Thereby we have introduced meditation sessions on daily bases, which will let you live to the fullest of yourself.
+			</h6>
+			<button type="submit" class="black_button" style="width: 150px">Book&nbsp;&nbsp;<i class="fa fa-thumb-tack"></i></button>
+		</div>
+		<script type="text/javascript">
+			$("#two-two").hide();
+			$("#two-one").mouseenter(function(){
+				$("#two-three").slideUp(100);				
+				$("#two-img").slideUp(100);
+				$("#two-two").delay(100).fadeIn(500);
+			});
+			$("#two-one").mouseleave(function(){
+				$("#two-two").slideUp(100);				
+				$("#two-three").delay(100).fadeIn(500);
+				$("#two-img").delay(100).fadeIn(500);
+			});
+		</script>
+
+		<div class="meditation-festival w3-margin-bottom" id="three-one">
+			<img src="./images/yoga_drib01.gif" style="width:100%;height:auto" id="three-img">
+			<h3>Meditation Festival</h3>
+			<h4>1h | ₹1,000</h4>
+			<div id="three-three">
+				<br><br>
+			</div>
+			<h6 class="w3-justify" id="three-two">
+				Special occasions happens here too, every day is a special gift, thereby we celebrate the gift of joy periodically throughout the year like a festival. Meditation will make you more alive and sensitive; your life will become richer. Watch out. Always remember that if you are moving in the right direction, you will go on flowering, we will help you achieve that.
+			</h6>
+				<button type="submit" class="black_button" style="width: 150px">Book&nbsp;&nbsp;<i class="fa fa-thumb-tack"></i></button>
+		</div>
+		<script type="text/javascript">
+			$("#three-two").hide();
+			$("#three-one").mouseenter(function(){
+				$("#three-three").slideUp(100);				
+				$("#three-img").slideUp(100);
+				$("#three-two").delay(100).fadeIn(500);
+			});
+			$("#three-one").mouseleave(function(){
+				$("#three-two").slideUp(100);				
+				$("#three-three").delay(100).fadeIn(500);
+				$("#three-img").delay(100).fadeIn(500);
+			});
+		</script>
+	</div>
+
+</div>
+<!-- /work -->
+
+<!--instagram container-->
+<style type="text/css">
+.instagram
+{
+	background-color: #fff;
+}
+</style>
+
+<div class="w3-container w3-padding-64 instagram padding_10">
+	<div id="gallery"></div>
+	<div class="border_top">
+		<br>
+	</div>
+	<div class="border_header">
+		<b>GALLERY</b>
+	</div>
+	<hr>
+<!--instagram live feed api pixlee-->
+<div id="pixlee_container"></div><script type="text/javascript">window.PixleeAsyncInit = function() {Pixlee.init({apiKey:'XvgW6U37E4c1a9Cj1gb'});Pixlee.addSimpleWidget({widgetId:'5618'});};</script><script src="//instafeed.assets.pixlee.com/assets/pixlee_widget_1_0_0.js"></script>
+	<hr>
+	<br>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="conta"></div>
+
+<!-- footer -->
+<style type="text/css">
+.footer
+{
+    background-color: #57bbbf;
+    width:100%;
+    color: #eee;
+    height:auto;
+    text-align: center;
+    font-size: 20px;
+}
+.social-media
+{
+    text-align: center;
+}
+.social-media img
+{
+    max-width: 50px;
+    width:100%;
+    height:auto;
+    margin:20px;
+    cursor: pointer;
+}
+</style>
+<div class="w3-container footer w3-padding-32 w3-text-black padding_10">
+	<div class="W3-container w3-half">
+		<span style="font-size: 22px"><b>Osho Madhushala </b></span><br>
+		2150 narela mandi extension <br>
+		delhi - 110040
+		<br>
+		<div class="w3-margin-bottom"></div>
+		Tel: +91 98 11 466360<br>
+		<div class="w3-margin-bottom"></div>
+		Email : antarmuni@gmail.com<br>
+		<br>
+	</div>
+	<div class="w3-container w3-half">
+		    	<div class="black_button w3-center" style="width: 140px;height:40px;padding-top:3px;margin:auto;">Query <i class="fa fa-question"></i></div><br>
+		<span style="font-size: 22px"><b>Social Media & Other</b></span>
+    	
+	    <div class="social-media">
+    	    <a href="https://www.facebook.com/oshomadhushala.narela" target="_blank"><img src="./images/facebook.svg"/></a>
+        	<a href="https://www.instagram.com/osho_madhushala/" target="_blank"><img src="./images/instagram.svg"/></a>
+        	<a href="https://twitter.com/oshomadhushala" target="_blank"><img src="./images/twitter.svg"/></a>
+        	<a href="https://www.youtube.com/channel/UCnU_F63NHDSzIo1zZdkYAuQ" target="_blank"><img src="./images/youtube.svg"/></a>
+<style>
+
+.title
+{
+color:#3171d8;
+font-size:25px;
+}
+.content p
+{
+font-size:18px;
+}
+
+.close-modal
+{
+background-color:#e88651;
+padding:10px;
+margin:5px;
+color:#fff;
+font-size:18px;
+text-decoration:none;
+width:100px;
+border-radius:3px;
+text-transform:uppercase;
+letter-spacing:2px;
+}
+.close-modal
+{
+background-color: tomato;
+}
+.overlay {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.35s ease-in-out;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.overlay.open {
+  opacity: 1;
+  pointer-events: inherit;
+}
+.overlay .modal {
+  background: white;
+  text-align: center;
+  padding: 40px 80px;
+  box-shadow: 0px 1px 10px rgba(255, 255, 255, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.35s ease-in-out;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.overlay .modal.open {
+  opacity: 1;
+  pointer-events: inherit;
+}
+.overlay .modal.open .content {
+  transform: translate(0, 0px);
+  opacity: 1;
+}
+.overlay .modal .content {
+  transform: translate(0, -10px);
+  opacity: 0;
+  transition: 0.35s ease-in-out;
+}
+.overlay .modal .title {
+  margin-top: 0;
+}
+</style>
+
+
+<img src="./images/whatsapp.svg" class="open-modal" data-modal="#modal1">
+
+<div class='modal' id='modal1'>
+	<div class='content'>
+		<div class='title'>Whatsapp Number</div>
+<hr>
+		<p style="width:200px;color:#101010">
+				+91 98 11 466360
+		</p>
+		<a class='close-modal' data-modal="#modal1" href="#">Okay</a>
+	</div>	
+</div>	
+
+<script>
+$(".modal").each( function(){
+	$(this).wrap('<div class="overlay"></div>')
+});
+
+$(".open-modal").on('click', function(e){
+	e.preventDefault();
+	e.stopImmediatePropagation;
+	
+	var $this = $(this),
+			modal = $($this).data("modal");
+	
+	$(modal).parents(".overlay").addClass("open");
+	setTimeout( function(){
+		$(modal).addClass("open");
+	}, 350);
+	
+	$(document).on('click', function(e){
+		var target = $(e.target);
+		
+		if ($(target).hasClass("overlay")){
+			$(target).find(".modal").each( function(){
+				$(this).removeClass("open");
+			});
+			setTimeout( function(){
+				$(target).removeClass("open");
+			}, 350);
+		}
+		
+	});
+	
+});
+
+$(".close-modal").on('click', function(e){
+	e.preventDefault();
+	e.stopImmediatePropagation;
+	
+	var $this = $(this),
+			modal = $($this).data("modal");
+	
+	$(modal).removeClass("open");
+	setTimeout( function(){	
+		$(modal).parents(".overlay").removeClass("open");
+	}, 350);
+	
+});	
+</script>
+    	</div>
+
+    </div>
+</div>
+
+<!-- /footer -->
+
+<!-- scroll to section -->
+<script type="text/javascript">
+$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top - 100
+    }, 500);
+});
+</script>
+<!-- /scroll to section -->
+
+<!-- animation style -->
+<style type="text/css">
+.bounceInDown {
+    -webkit-animation-name: bounceInDown;
+    animation-name: bounceInDown;
+}
+.animated-fast {
+    -webkit-animation-duration: 0.7s;
+    animation-duration: 0.7s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+@keyframes bounceInDown
+{
+0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0);
+}   
+60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+}
+75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+}
+90% {
+    -webkit-transform: translate3d(0, 5px, 0)
+ ;   transform: translate3d(0, 5px, 0);
+}
+100% {
+    -webkit-transform: none;
+    transform: none;
+}
+}
+
+@keyframes homeImgAnimation
+{
+0% {
+    -webkit-transform: rotate(4deg);
+    transform: rotate(5deg);
+}
+50% {
+    -webkit-transform: rotate(-4deg);
+    transform: rotate(-5deg);
+}
+100% {
+    -webkit-transform: rotate(4deg);
+    transform: rotate(5deg);
+}
+}
+</style>
+<!-- /animation style -->
+
+
+
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".loader").delay(1000).fadeOut();
+    $(".no-loader").delay(1500).fadeIn();
+});
+</script>
+
+
+</body>
+</html>
