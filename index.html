@@ -777,7 +777,7 @@ $(".close-modal-a").on('click', function(e){
 			<h6 class="w3-justify" id="three-two">
 				Special occasions happens here too, every day is a special gift, thereby we celebrate the gift of joy periodically throughout the year like a festival. Meditation will make you more alive and sensitive; your life will become richer. Watch out. Always remember that if you are moving in the right direction, you will go on flowering, we will help you achieve that.
 			</h6>
-				<a href="https://goo.gl/forms/p7fVHHMmr6poHKbP2" target="_blank"><button type="submit" class="black_button" style="width: 150px">Book&nbsp;&nbsp;<i class="fa fa-thumb-tack"></i></button></a>
+				<button type="submit" class="black_button open-modal-festival" data-modal="#modal1-festival" style="width: 150px">Book&nbsp;&nbsp;<i class="fa fa-thumb-tack"></i></button>
 		</div>
 		<script type="text/javascript">
 			$("#three-two").hide();
@@ -791,6 +791,159 @@ $(".close-modal-a").on('click', function(e){
 				$("#three-three").delay(100).fadeIn(500);
 				$("#three-img").delay(100).fadeIn(500);
 			});
+		</script>
+		
+		<style>
+		.title-festival
+		{
+		color:#3171d8;
+		font-size:25px;
+		}
+		.content-festival p
+		{
+		font-size:18px;
+		}
+		.close-modal-festival
+		{
+		background-color:#e88651;
+		padding:10px;
+		margin:5px;
+		color:#fff;
+		font-size:18px;
+		text-decoration:none;
+		width:100px;
+		border-radius:3px;
+		text-transform:uppercase;
+		letter-spacing:2px;
+		}
+		.close-modal-festival:hover
+		{
+			background-color: tomato;
+		}
+		.overlay-festival {
+		  width: 100%;
+		  min-height: 100vh;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  flex-direction: column;
+		  padding: 40px;
+		  position: fixed;
+		  top: 0;
+		  left: 0;
+		  background: rgba(0, 0, 0, 0.75);
+		  opacity: 0;
+		  z-index: 5000;
+		  pointer-events: none;
+		  transition: 0.35s ease-in-out;
+		  max-height: 100vh;
+		  overflow-y: auto;
+		}
+		.overlay-festival.open-festival {
+		  opacity: 1;
+		  pointer-events: inherit;
+		}
+		.overlay-festival .modal-festival {
+		  background: white;
+		  text-festivallign: center;
+		  padding: 40px 80px;
+		  box-shadow: 0px 1px 10px rgba(255, 255, 255, 0.35);
+		  opacity: 0;
+		  z-index: 5000;
+		  pointer-events: none;
+		  transition: 0.35s ease-in-out;
+		  max-height: 100vh;
+		  overflow-y: auto;
+		}
+		.overlay-festival .modal-festival.open-festival {
+		  opacity: 1;
+		  pointer-events: inherit;
+		}
+		.overlay-festival .modal-festival.open-festival .content-festival {
+		  transform: translate(0, 0px);
+		  opacity: 1;
+		}
+		.overlay-festival .modal-festival .content-festival {
+		  transform: translate(0, -10px);
+		  opacity: 0;
+		  transition: 0.35s ease-in-out;
+		}
+		.overlay-festival .modal-festival .title-festival {
+		  margin-top: 0;
+		}
+		@media screen and ( max-width: 650px )
+		{
+			.overlay-festival, #modal1-festival
+			{
+				padding-left: 5px !important;
+				padding-right: 5px !important;
+				padding-top: 10px !important;
+				padding-bottom: 10px !important;
+
+			}
+		}
+		</style>
+
+		<div class='modal-festival' id='modal1-festival'>
+			<div class='content-festival'>
+				<div class='title-festival'>About Us<a class='close-modal-festival' style="width:50px;color:#fff; float:right;padding:5px;border-radius: 5px;" data-modal="#modal1-festival" href="#">X</a></div>
+				<hr>
+				<div>
+					Celebrate Love & Celebration 
+					<img src="./img/festival1.jpeg" style="width:auto;height:auto">
+					<a href="https://goo.gl/forms/p7fVHHMmr6poHKbP2" target="_blank">Other</a>
+				</div>
+				<br><br>
+				<a class='close-modal-festival' data-modal="#modal1-festival" href="#">Okay</a>
+			</div>	
+		</div>	
+
+		<script>
+		$(".modal-festival").each( function(){
+			$(this).wrap('<div class="overlay-festival"></div>')
+		});
+
+		$(".open-modal-festival").on('click', function(e){
+			e.preventDefault();
+			e.stopImmediatePropagation;
+
+			var $this = $(this),
+					modal = $($this).data("modal");
+
+			$(modal).parents(".overlay-festival").addClass("open-festival");
+			setTimeout( function(){
+				$(modal).addClass("open-festival");
+			}, 350);
+
+			$(document).on('click', function(e){
+				var target = $(e.target);
+
+				if ($(target).hasClass("overlay-festival")){
+					$(target).find(".modal-festival").each( function(){
+						$(this).removeClass("open-festival");
+					});
+					setTimeout( function(){
+						$(target).removeClass("open-festival");
+					}, 350);
+				}
+
+			});
+
+		});
+
+		$(".close-modal-festival").on('click', function(e){
+			e.preventDefault();
+			e.stopImmediatePropagation;
+
+			var $this = $(this),
+					modal = $($this).data("modal");
+
+			$(modal).removeClass("open-festival");
+			setTimeout( function(){	
+				$(modal).parents(".overlay-festival").removeClass("open-festival");
+			}, 350);
+
+		});	
 		</script>
 	</div>
 
